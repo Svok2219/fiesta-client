@@ -62,7 +62,7 @@ const RegistrationPage = () => {
     
         console.log(name , passingYear , roleNumber , email)
     
-        const res = await fetch("http://localhost:3000/User", {
+        const res = await fetch("https://fiesta-backend-server.onrender.com/User", {
           method: "POST",
           headers: {
             "Content-type": "application/json"
