@@ -71,7 +71,7 @@ const AdminPanel = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch("http://localhost:3000/Products");
+      const response = await fetch("https://fiesta-backend-server.onrender.com/Products");
       const data = await response.json();
       
       setProducts( data)
@@ -102,7 +102,7 @@ const AdminPanel = () => {
     
         // console.log(Name ,image:"fkfshfkjshfhsdfhksf" , price , Category , image , size)
     
-        const res = await fetch("http://localhost:3000/Products", {
+        const res = await fetch("https://fiesta-backend-server.onrender.com/Products", {
           method: "POST",
           headers: {
             "Content-type": "application/json"
@@ -133,7 +133,7 @@ const AdminPanel = () => {
 
   const deleteProduct = async (id) => {
     try {
-      await fetch(`http://localhost:3000/Products/${id}`, {
+      await fetch(`https://fiesta-backend-server.onrender.com/Products/${id}`, {
         method: "DELETE",
       });
       setProducts(!products);
@@ -162,7 +162,7 @@ const AdminPanel = () => {
     event.preventDefault();
     // console.log(image,price)
     try {
-      const response = await fetch('http://localhost:3000/Products', {
+      const response = await fetch('https://fiesta-backend-server.onrender.com/Products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -205,7 +205,7 @@ const beverage = useRef()
     };
 
     try {
-      const response = await fetch('http://localhost:3000/Products', {
+      const response = await fetch('https://fiesta-backend-server.onrender.com/Products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -253,7 +253,7 @@ const beverage = useRef()
   const updateProduct = async (item) => {
    
 
-    const response = await fetch(`http://localhost:3000/Products/${item._id}`)
+    const response = await fetch(`https://fiesta-backend-server.onrender.com/Products/${item._id}`)
     const data = await response.json();
     console.log(data)
     setItem(data[0])
@@ -274,7 +274,7 @@ const beverage = useRef()
     const image = imageRef.current.value;
 
     try {
-      const response = await fetch(`http://localhost:3000/Products/${item._id}`, {
+      const response = await fetch(`https://fiesta-backend-server.onrender.com/Products/${item._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
