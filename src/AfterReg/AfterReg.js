@@ -205,7 +205,7 @@ const AfterReg = () => {
     
         console.log(FullName , PassingYear , RoleNumber , Email)
     
-        const res = await fetch("http://localhost:3000/Order", {
+        const res = await fetch("https://fiesta-backend-server.onrender.com/Order", {
           method: "POST",
           headers: {
             "Content-type": "application/json"
@@ -293,7 +293,7 @@ console.log(filteredFruits)
   
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:3000/Products");
+        const response = await fetch("https://fiesta-backend-server.onrender.com/Products");
         const data = await response.json();
         
         setProducts( data)
